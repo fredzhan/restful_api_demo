@@ -1,0 +1,25 @@
+database:
+    db_file_dir: .
+    db_name: jd
+
+system:
+    # debug | info | warn | error | critical
+    logging_level: info
+
+spider:
+    request:
+        url: 'https://club.jd.com/comment/productPageComments.action'
+        dynamic_params:
+            # page start and end index
+            'page': [0,5]
+        static_params:
+            'callback': 'fetchJSON_comment98vv1252'
+            'productId': '1384071'
+            'score': 0
+            'sortType': 6
+            'pageSize': 10
+            'isShadowSku': 0
+            'rid': 0
+            'fold': 1
+        header:
+            'Referer': 'https://item.jd.com/1384071.html'
