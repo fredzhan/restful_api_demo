@@ -2,7 +2,7 @@ import yaml
 import os
 import logging
 
-PROJECT_BASE = os.path.abspath(os.path.join(os.getcwd(), '..'))
+PROJECT_BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 def load_config_file(file_name='config.yaml'):
     config_file = open(os.path.join(PROJECT_BASE, file_name),'r').read()

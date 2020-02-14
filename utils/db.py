@@ -1,5 +1,5 @@
 import sqlite3
-from utils.env_vars import DB_FILE, LOGGER
+from env_vars import DB_FILE, LOGGER
 
 class Sqllite:
 
