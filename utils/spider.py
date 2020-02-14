@@ -1,7 +1,7 @@
 #encoding:utf-8
 import json
-from utils.db import Sqllite
-from utils.env_vars import LOGGER, REQUESTS
+from db import Sqllite
+from env_vars import LOGGER, REQUESTS
 import requests
 from time import sleep, time
 
