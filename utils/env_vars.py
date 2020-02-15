@@ -13,7 +13,7 @@ def get_db_file(config, file_extensions='.db'):
     db_name = config['database']['db_name']
     return os.path.join(PROJECT_BASE, db_file_dir, db_name+file_extensions)
 
-def get_logger(config, filename='logger.log'):
+def get_logger(config, filename='logs/logger.log'):
     level_config = config['system']['logging_level'].lower()
     level_mapping = {
         'debug': logging.DEBUG,
