@@ -1,12 +1,12 @@
 import sqlite3
-from env_vars import DB_FILE, LOGGER
+from utils.env_vars import DB_FILE, LOGGER
 
 class Sqllite:
 
     def __init__(self):
         self.conn = sqlite3.connect(DB_FILE)
         self.cursor = self.conn.cursor()
-        LOGGER.info("Connected to DB: {db}".format(db=DB_FILE))
+        LOGGER.debug("Connected to DB: {db}".format(db=DB_FILE))
 
     # Execute queries W/ return value
     def query(self, q):
@@ -19,5 +19,6 @@ class Sqllite:
 
     def close(self):
         self.conn.close()
+
 
 
